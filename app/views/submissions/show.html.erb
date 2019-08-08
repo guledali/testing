@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<p class="submission-title">
+  <strong>Title:</strong> <%= @submission.title %>
+</p>
+
+<p class="submission-body">
+  <strong>Body:</strong> <%= @submission.body %>
+</p>
+
+<%= link_to 'Edit Submission', edit_submission_path(@submission) %>

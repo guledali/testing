@@ -1,0 +1,19 @@
+<h1>Submissions</h1>
+<%= link_to "New Submission", new_submission_path %>
+<p id="notice"><%= notice %></p>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th></th>
+  </tr>
+
+<% @submissions.each do |submission| %>
+  <tr>
+    <td><%= submission.title %></td>
+    <td><%= submission.body %></td>
+    <td><%= link_to "Edit", edit_submission_path(submission.id) %></td>
+    <td><%= link_to 'Destroy', submission, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
